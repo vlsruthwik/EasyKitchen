@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EasyKitchen</string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_Customer">Customer</string>
+    <string name="title_waiter">Waiter</string>
+    <string name="title_chef">Chef</string>
+</resources>
