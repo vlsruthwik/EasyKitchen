@@ -40,7 +40,6 @@
         android:onClick="add_open"
         android:text="New Order"
         android:textColor="@color/white"
-
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view"

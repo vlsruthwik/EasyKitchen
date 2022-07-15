@@ -1,6 +1,7 @@
 package com.example.easykitchen.ui.home;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.easykitchen.MainActivity;
+import com.example.easykitchen.MainScreen;
 import com.example.easykitchen.R;
 import com.example.easykitchen.databinding.FragmentHomeBinding;
 
@@ -40,20 +43,6 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
-    public void showMenu(){
-        dialogBuilder = new AlertDialog.Builder(getActivity());
-        final View contactpopupview = getLayoutInflater().inflate(R.layout.menu_popup,null);
-        dialogBuilder.setView(contactpopupview);
-
-        dialog = dialogBuilder.create();
-        dialog.show();
-
-
-    }
-
-    
-
 
 
 

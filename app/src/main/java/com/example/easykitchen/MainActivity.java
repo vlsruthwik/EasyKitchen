@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,MainScreen.class));
         }
         else{
-            Toast t = Toast.makeText(getApplicationContext(),"Please enter a valid mobile number",Toast.LENGTH_LONG);
+            Toast t = Toast.makeText(getApplicationContext(),"Please enter a valid 10-digit mobile number",Toast.LENGTH_LONG);
             t.show();
         }
     }
