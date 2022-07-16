@@ -29,18 +29,17 @@ public class ListAdapter extends ArrayAdapter<item> {
         item it = getItem(position);
 
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_card,parent,false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.cust_orders,parent,false);
 
         }
-        ImageView img = convertView.findViewById(R.id.dish_photo);
-        TextView dish = convertView.findViewById(R.id.dish);
-        TextView quant = convertView.findViewById(R.id.quant_field);
-        TextView cost = convertView.findViewById(R.id.price);
 
-        img.setImageResource(it.imgID);
-        dish.setText(it.dish_name);
-        quant.setText(it.quant);
-        cost.setText(it.cost);
+        TextView dish_name = convertView.findViewById(R.id.curr_dish_name);
+        TextView dish_quant = convertView.findViewById(R.id.curr_dish_quant);
+        TextView dish_status = convertView.findViewById(R.id.curr_dish_status);
+
+        dish_name.setText(it.getDish_name());
+        dish_quant.setText(String.valueOf(it.getQuant()));
+        dish_status.setText(it.getStatus());
 
 //         return super.getView(position, convertView, parent);
         return convertView;

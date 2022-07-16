@@ -26,27 +26,935 @@
         android:id="@+id/order_btn"
         android:layout_width="203dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
         android:backgroundTint="@color/red"
         android:letterSpacing="0.1"
         android:text="Confirm Order"
         android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/menu_list"
+        android:onClick="order_these"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/menu_list"
-        android:layout_width="1264dp"
-        android:layout_height="743dp"
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1296dp"
+        android:layout_height="14dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="1277dp"
+        android:layout_height="688dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:listitem="@layout/item_card" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="1282dp"
+            android:layout_height="730dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView1"
+                        android:layout_alignTop="@+id/imageView1"
+                        android:layout_alignEnd="@+id/imageView1"
+                        android:layout_alignBottom="@+id/imageView1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/a" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView1"
+                        android:layout_alignTop="@+id/imageView1"
+                        android:layout_alignEnd="@+id/imageView1"
+                        android:layout_alignBottom="@+id/imageView1"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field1"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView1"
+                        android:layout_alignTop="@+id/imageView1"
+                        android:layout_alignEnd="@+id/imageView1"
+                        android:layout_alignBottom="@+id/imageView1"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView2"
+                        android:layout_alignTop="@+id/imageView2"
+                        android:layout_alignEnd="@+id/imageView2"
+                        android:layout_alignBottom="@+id/imageView2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/b" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView2"
+                        android:layout_alignTop="@+id/imageView2"
+                        android:layout_alignEnd="@+id/imageView2"
+                        android:layout_alignBottom="@+id/imageView2"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field2"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView2"
+                        android:layout_alignTop="@+id/imageView2"
+                        android:layout_alignEnd="@+id/imageView2"
+                        android:layout_alignBottom="@+id/imageView2"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView3"
+                        android:layout_alignTop="@+id/imageView3"
+                        android:layout_alignEnd="@+id/imageView3"
+                        android:layout_alignBottom="@+id/imageView3"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/c" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView3"
+                        android:layout_alignTop="@+id/imageView3"
+                        android:layout_alignEnd="@+id/imageView3"
+                        android:layout_alignBottom="@+id/imageView3"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field3"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView3"
+                        android:layout_alignTop="@+id/imageView3"
+                        android:layout_alignEnd="@+id/imageView3"
+                        android:layout_alignBottom="@+id/imageView3"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView4"
+                        android:layout_alignTop="@+id/imageView4"
+                        android:layout_alignEnd="@+id/imageView4"
+                        android:layout_alignBottom="@+id/imageView4"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/d" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView4"
+                        android:layout_alignTop="@+id/imageView4"
+                        android:layout_alignEnd="@+id/imageView4"
+                        android:layout_alignBottom="@+id/imageView4"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field4"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView4"
+                        android:layout_alignTop="@+id/imageView4"
+                        android:layout_alignEnd="@+id/imageView4"
+                        android:layout_alignBottom="@+id/imageView4"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView5"
+                        android:layout_alignTop="@+id/imageView5"
+                        android:layout_alignEnd="@+id/imageView5"
+                        android:layout_alignBottom="@+id/imageView5"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/e" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView5"
+                        android:layout_alignTop="@+id/imageView5"
+                        android:layout_alignEnd="@+id/imageView5"
+                        android:layout_alignBottom="@+id/imageView5"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="57dp"
+                        android:layout_alignStart="@+id/imageView5"
+                        android:layout_alignTop="@+id/imageView5"
+                        android:layout_alignEnd="@+id/imageView5"
+                        android:layout_alignBottom="@+id/imageView5"
+                        android:layout_marginStart="289dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView6"
+                        android:layout_alignTop="@+id/imageView6"
+                        android:layout_alignEnd="@+id/imageView6"
+                        android:layout_alignBottom="@+id/imageView6"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/f" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView6"
+                        android:layout_alignTop="@+id/imageView6"
+                        android:layout_alignEnd="@+id/imageView6"
+                        android:layout_alignBottom="@+id/imageView6"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field6"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView6"
+                        android:layout_alignTop="@+id/imageView6"
+                        android:layout_alignEnd="@+id/imageView6"
+                        android:layout_alignBottom="@+id/imageView6"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView7"
+                        android:layout_alignTop="@+id/imageView7"
+                        android:layout_alignEnd="@+id/imageView7"
+                        android:layout_alignBottom="@+id/imageView7"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/g" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView7"
+                        android:layout_alignTop="@+id/imageView7"
+                        android:layout_alignEnd="@+id/imageView7"
+                        android:layout_alignBottom="@+id/imageView7"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field7"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView7"
+                        android:layout_alignTop="@+id/imageView7"
+                        android:layout_alignEnd="@+id/imageView7"
+                        android:layout_alignBottom="@+id/imageView7"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView8"
+                        android:layout_alignTop="@+id/imageView8"
+                        android:layout_alignEnd="@+id/imageView8"
+                        android:layout_alignBottom="@+id/imageView8"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/h" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView8"
+                        android:layout_alignTop="@+id/imageView8"
+                        android:layout_alignEnd="@+id/imageView8"
+                        android:layout_alignBottom="@+id/imageView8"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field8"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView8"
+                        android:layout_alignTop="@+id/imageView8"
+                        android:layout_alignEnd="@+id/imageView8"
+                        android:layout_alignBottom="@+id/imageView8"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView9"
+                        android:layout_alignTop="@+id/imageView9"
+                        android:layout_alignEnd="@+id/imageView9"
+                        android:layout_alignBottom="@+id/imageView9"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/i" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView9"
+                        android:layout_alignTop="@+id/imageView9"
+                        android:layout_alignEnd="@+id/imageView9"
+                        android:layout_alignBottom="@+id/imageView9"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field9"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView9"
+                        android:layout_alignTop="@+id/imageView9"
+                        android:layout_alignEnd="@+id/imageView9"
+                        android:layout_alignBottom="@+id/imageView9"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="427dp"
+                        android:layout_height="142dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="846dp"
+                        android:src="@drawable/item_bg"
+                        tools:ignore="DuplicateIds" />
+
+                    <ImageView
+                        android:id="@+id/dish_photo10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignStart="@+id/imageView10"
+                        android:layout_alignTop="@+id/imageView10"
+                        android:layout_alignEnd="@+id/imageView10"
+                        android:layout_alignBottom="@+id/imageView10"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginEnd="279dp"
+                        android:layout_marginBottom="21dp"
+                        android:src="@drawable/j" />
+
+                    <LinearLayout
+                        android:layout_width="176dp"
+                        android:layout_height="86dp"
+                        android:layout_alignStart="@+id/imageView10"
+                        android:layout_alignTop="@+id/imageView10"
+                        android:layout_alignEnd="@+id/imageView10"
+                        android:layout_alignBottom="@+id/imageView10"
+                        android:layout_marginStart="103dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginBottom="27dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/dish_name10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dish"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dish_cost10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="₹" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quant_field10"
+                        android:layout_width="68dp"
+                        android:layout_height="65dp"
+                        android:layout_alignStart="@+id/imageView10"
+                        android:layout_alignTop="@+id/imageView10"
+                        android:layout_alignEnd="@+id/imageView10"
+                        android:layout_alignBottom="@+id/imageView10"
+                        android:layout_marginStart="291dp"
+                        android:layout_marginTop="39dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="30dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

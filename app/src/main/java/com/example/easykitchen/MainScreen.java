@@ -1,8 +1,15 @@
 package com.example.easykitchen;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.easykitchen.ui.home.menu_list;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,10 +26,10 @@ import java.util.ArrayList;
 
 public class MainScreen extends AppCompatActivity {
 
-    ActivityMainScreenBinding binding;
+    private ActivityMainScreenBinding binding;
 
-
-
+    public ListView cust_view,serve_view,chef_view;
+    public ArrayList<item> curr_menu,chef_list,serve_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +48,40 @@ public class MainScreen extends AppCompatActivity {
 
         NavigationUI.setupWithNavController(binding.navView, navController);
 
+        cust_view = findViewById(R.id.cust_list);
+        chef_view = (ListView) findViewById(R.id.chef_list);
+        curr_menu = menu_list.it_arr;
+
+
+
+        ListAdapter listAdapter = new ListAdapter(this,curr_menu);
+        cust_view.setAdapter(listAdapter);
 
     }
 
     public void add_open(View add) {
         startActivity(new Intent(MainScreen.this,menu_list.class));
     }
+
+    public void generate_bill(View view) {
+        int Total = 0;
+        for (item i : menu_list.it_arr) {
+            Total+=i.getCost()*i.getQuant();
+        }
+        AlertDialog altr = new AlertDialog.Builder(this).create();
+        altr.setTitle("Toatal Bill");
+        altr.setMessage("₹ "+Total);
+        altr.setButton("PAY", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                System.exit(0);
+
+            }
+        });
+        altr.show();
+
+    }
+
 
 
 
