@@ -2,10 +2,10 @@ package com.example.easykitchen;
 
 public class item {
 
-    String dish_name;
-    int cost,quant, imgID;
+    String dish_name,cost,quant;
+    int  imgID;
 
-    public item(String dish_name,int cost, int quant,int imgID){
+    public item(String dish_name,String cost, String quant,int imgID){
         this.dish_name = dish_name;
         this.cost = cost;
         this.quant = quant;
@@ -20,11 +20,11 @@ public class item {
 
     public void setImgID(int t_imgID){this.imgID = t_imgID;}
 
-    public int getCost(){return cost;}
+    public String getCost(){return cost;}
 
-    public void setCost(int t_cost){this.cost = t_cost;}
+    public void setCost(String t_cost){this.cost = t_cost;}
 
-    public int getQuant(){return quant;}
+    public String getQuant(){return quant;}
 
-    public void setQuant(int t_quant){this.quant = t_quant;}
+    public void setQuant(String t_quant){this.quant = t_quant;}
 }

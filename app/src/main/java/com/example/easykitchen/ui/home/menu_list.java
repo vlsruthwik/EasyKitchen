@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ListView;
 
 import com.example.easykitchen.ListAdapter;
 import com.example.easykitchen.MainScreen;
@@ -38,19 +39,21 @@ public class menu_list extends AppCompatActivity {
                 R.drawable.j};
 
         String[] dishes = {"Tomato Soup","Panner Manchurian","Veg Biryani","Veg Fried Rice","South Indian Thali","Panner Butter Masala","Butter Naan","Chocolate Cake","Vanilla Ice-cream","Butter Milk"};
-        int[] cost = {129,269,275,229,199,299,50,599,169,40};
-        int[] quant = {0,0,0,0,0,0,0,0,0,0};
+        String[] cost = {"129","269","275","229","199","299","50","599","169","40"};
+        String[] quant = {"0","0","0","0","0","0","0","0","0","0"};
 
 
-        ArrayList<item> it_arr = new ArrayList<>();
+        ArrayList<item> it_arr = new ArrayList<item>();
 
         for(int i=0;i<img_arr.length;i++){
             item it = new item(dishes[i],cost[i],quant[i],img_arr[i]);
             it_arr.add(it);
         }
 
-        ListAdapter listAdapter = new ListAdapter(menu_list.this,it_arr);
-        binding.menuList.setAdapter(listAdapter);
+        ListAdapter listAdapter = new ListAdapter(this,it_arr);
+//        binding.menuList.setAdapter(listAdapter);
+        ListView menu = findViewById(R.id.menu_list);
+        menu.setAdapter(listAdapter);
 
 
     }

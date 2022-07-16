@@ -19,7 +19,7 @@ import java.util.List;
 public class ListAdapter extends ArrayAdapter<item> {
 
     public ListAdapter(Context context, ArrayList<item> menuList){
-        super(context,R.layout.item_card,menuList);
+        super(context,0,menuList);
     }
 
     @NonNull
@@ -27,6 +27,7 @@ public class ListAdapter extends ArrayAdapter<item> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         item it = getItem(position);
+
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_card,parent,false);
 
@@ -41,6 +42,7 @@ public class ListAdapter extends ArrayAdapter<item> {
         quant.setText(it.quant);
         cost.setText(it.cost);
 
-        return super.getView(position, convertView, parent);
+//         return super.getView(position, convertView, parent);
+        return convertView;
     }
 }
