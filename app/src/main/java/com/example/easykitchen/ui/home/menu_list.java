@@ -97,7 +97,7 @@ public class menu_list extends AppCompatActivity {
                 it_arr.add(it);
             }
         }
-
+        this.finish();
         startActivity(new Intent(menu_list.this,MainScreen.class));
     }
 }
